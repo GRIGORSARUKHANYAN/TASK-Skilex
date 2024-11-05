@@ -1,0 +1,47 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0-oas3.1
+  title: Education Management System API
+  contact:
+    email: artyom.hayrapetyan0001@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+tags:
+  - name: Combinations
+    description: Operations about Combinations
+
+paths:
+
+  /Combination:
+    post:
+      summary: create Combination
+      operationId: createCombination
+      description: This endpoint create Combination.
+      tags:
+        - Combinations
+      security:
+
+      requestBody:
+        description: create Combination  details
+        content:
+          form-data:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  required: true
+      responses:
+        "200":
+          description: createCombination
+          content:
+            application/json:
+              schema:
+                type: string
+        "400":
+          description: Bad input parameter
+
+  
+
+  
